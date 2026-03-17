@@ -1,9 +1,11 @@
+import os
 import sqlite3
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from telegram.ext import MessageHandler, filters
 
-TOKEN = "8649883090:AAHi7sprbMsCgd7YZu4BoP5o1bGh4K8DVtY"
+TOKEN = os.getenv("BOT_TOKEN")
+
 
 AUTHORIZED_USER_ID = 5014598475  # 👈 pegá tu ID real acá
 
