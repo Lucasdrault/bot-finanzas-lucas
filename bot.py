@@ -20,6 +20,7 @@ CATEGORIAS = {
     "Ropa": ["roma mia", "ropa more", "ropa fran"],
     "Sevicios": ["gas", "luz", "agua", "municipal", "tasa de limpieza"],
     "Departamento": ["expensas", "arreglos"],
+    "auto": ["patente", "nafta", "taller", "seguro"],
 }
 
 
@@ -162,4 +163,4 @@ app.add_handler(CommandHandler("resumen", resumen))
 app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, procesar_texto))
 
 
-app.run_polling()
+app.run_polling(drop_pending_updates=True)
